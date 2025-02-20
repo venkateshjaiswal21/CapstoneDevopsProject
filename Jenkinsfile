@@ -29,14 +29,14 @@ pipeline{
         stage('Run the docker image'){
             steps{
                 echo "Running the docker image application"
-                bat 'docker run devopscapsproject'
+                bat 'docker run -p 3000:3000 devopscapsproject'
             }
         }
-        // stage('Delete the docker image'){
-        //     steps{
-        //         echo "Deleting the docker image"
-        //         bat 'docker rmi -f devopscapsproject'
-        //     }
-        // }
+        stage('Delete the docker image'){
+            steps{
+                echo "Deleting the docker image"
+                bat 'docker rmi -f devopscapsproject'
+            }
+        }
     }
 }
