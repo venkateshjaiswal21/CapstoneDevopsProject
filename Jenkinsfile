@@ -32,11 +32,11 @@ pipeline{
                 bat 'docker run devopscapsproject'
             }
         }
-        stage('Delete the docker image'){
-            steps{
-                echo "Deleting the docker image"
-                bat 'docker rmi -f devopscapsproject'
-            }
-        }
+        // stage('Delete the docker image'){
+        //     steps{
+        //         echo "Deleting the docker image"
+        //         bat 'docker rmi -f devopscapsproject'
+        //     }
+        // }
     }
 }
