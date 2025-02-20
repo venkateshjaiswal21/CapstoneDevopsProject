@@ -32,11 +32,5 @@ pipeline{
                 bat 'docker run -p 5000:5000 devopscapsproject'
             }
         }
-        stage('Delete the docker image'){
-            steps{
-                echo "Deleting the docker image"
-                bat 'docker rmi -f devopscapsproject'
-            }
-        }
     }
 }
